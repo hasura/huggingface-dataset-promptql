@@ -5,4 +5,4 @@ Supports importing
 - parquet
 - sqlite
 
-Head over to docs for the tutorial on how to set it up - https://promptql.hasura.io/docs/tutorials/huggingface-csv-parquet-sqlite-connector
+Head over to docs for the tutorial on how to set it up - [https://promptql.hasura.io/docs/tutorials/huggingface-csv-parquet-sqlite](https://promptql.hasura.io/docs/tutorials/huggingface-csv-parquet-sqlite)
