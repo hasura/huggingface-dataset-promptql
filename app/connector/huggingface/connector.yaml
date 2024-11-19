@@ -1,0 +1,20 @@
+kind: Connector
+version: v2
+definition:
+  name: huggingface
+  subgraph: app
+  source: hasura/duckduckapi:v0.5.3
+  context: .
+  envMapping:
+    DUCKDB_URL:
+      fromEnv: APP_HUGGINGFACE_DUCKDB_URL
+    FEATURE_MIN_INSTANCES:
+      fromEnv: APP_HUGGINGFACE_FEATURE_MIN_INSTANCES
+    FEATURE_PERSISTENT_DATA:
+      fromEnv: APP_HUGGINGFACE_FEATURE_PERSISTENT_DATA
+    HASURA_SERVICE_TOKEN_SECRET:
+      fromEnv: APP_HUGGINGFACE_HASURA_SERVICE_TOKEN_SECRET
+    OTEL_EXPORTER_OTLP_ENDPOINT:
+      fromEnv: APP_HUGGINGFACE_OTEL_EXPORTER_OTLP_ENDPOINT
+    OTEL_SERVICE_NAME:
+      fromEnv: APP_HUGGINGFACE_OTEL_SERVICE_NAME

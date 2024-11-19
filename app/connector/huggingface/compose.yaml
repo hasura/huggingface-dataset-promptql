@@ -1,0 +1,16 @@
+services:
+  app_huggingface:
+    build:
+      context: .
+      dockerfile: .hasura-connector/Dockerfile
+    environment:
+      DUCKDB_URL: $APP_HUGGINGFACE_DUCKDB_URL
+      FEATURE_MIN_INSTANCES: $APP_HUGGINGFACE_FEATURE_MIN_INSTANCES
+      FEATURE_PERSISTENT_DATA: $APP_HUGGINGFACE_FEATURE_PERSISTENT_DATA
+      HASURA_SERVICE_TOKEN_SECRET: $APP_HUGGINGFACE_HASURA_SERVICE_TOKEN_SECRET
+      OTEL_EXPORTER_OTLP_ENDPOINT: $APP_HUGGINGFACE_OTEL_EXPORTER_OTLP_ENDPOINT
+      OTEL_SERVICE_NAME: $APP_HUGGINGFACE_OTEL_SERVICE_NAME
+    extra_hosts:
+      - local.hasura.dev:host-gateway
+    ports:
+      - 4592:8080

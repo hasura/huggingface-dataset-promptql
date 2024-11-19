@@ -1,0 +1,19 @@
+kind: Subgraph
+version: v2
+definition:
+  name: app
+  generator:
+    rootPath: .
+    namingConvention: none
+  includePaths:
+    - metadata
+  envMapping:
+    APP_HUGGINGFACE_AUTHORIZATION_HEADER:
+      fromEnv: APP_HUGGINGFACE_AUTHORIZATION_HEADER
+    APP_HUGGINGFACE_READ_URL:
+      fromEnv: APP_HUGGINGFACE_READ_URL
+    APP_HUGGINGFACE_WRITE_URL:
+      fromEnv: APP_HUGGINGFACE_WRITE_URL
+  connectors:
+    - path: connector/huggingface/connector.yaml
+      connectorLinkName: huggingface
