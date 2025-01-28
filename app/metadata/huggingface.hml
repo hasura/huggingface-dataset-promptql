@@ -20,16 +20,10 @@ definition:
       functions: []
       procedures: []
     capabilities:
-      version: 0.1.6
+      version: ""
       capabilities:
-        query:
-          aggregates: {}
-          variables: {}
-          nested_fields: {}
+        query: {}
         mutation: {}
-        relationships:
-          relation_comparisons: {}
-          order_by_aggregate: {}
   argumentPresets:
     - argument: headers
       value:

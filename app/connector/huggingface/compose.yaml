@@ -13,4 +13,4 @@ services:
     extra_hosts:
       - local.hasura.dev:host-gateway
     ports:
-      - 4592:8080
+      - 9504:8080
